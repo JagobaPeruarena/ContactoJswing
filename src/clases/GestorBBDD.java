@@ -52,19 +52,19 @@ public class GestorBBDD extends Conector {
 		pt.execute();
 	}
 	
-	public void eliminarCliente(int id) throws SQLException {
+	public void eliminarCliente(String id) throws SQLException {
 		
 		String sent="DELETE FROM clientes WHERE dni=?";
 		PreparedStatement pt = con.prepareStatement(sent);
 		
-		pt.setInt(1, id);
+		pt.setString(1, id);
 		pt.execute();
 	}
 	
-	public clientes getCliente(int id) throws SQLException {
+	public clientes getCliente(String id) throws SQLException {
 		clientes newCliente= new clientes();
 		PreparedStatement pt = con.prepareStatement("SELECT * FROM clientes where DNI = ?");
-		pt.setInt(1, id);
+		pt.setString(1, id);
 		ResultSet resultado=pt.executeQuery();
 			
 		newCliente.setDni(resultado.getString(1));

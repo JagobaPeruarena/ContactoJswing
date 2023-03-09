@@ -139,7 +139,19 @@ public class principal extends JFrame {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				for (int i = 0; i < 50; i++) {
+				
+					ventana nVentana = new ventana();
+					nVentana.setVisible(true);
+					
+			}
+		});
+		btnNewButton_1.setBounds(389, 321, 127, 23);
+		contentPane.add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("c");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				for (int i = 0; i < 500; i++) {
 					
 					ventana nVentana = new ventana();
 					nVentana.setVisible(true);
@@ -148,7 +160,7 @@ public class principal extends JFrame {
 				}
 			}
 		});
-		btnNewButton_1.setBounds(389, 321, 127, 23);
-		contentPane.add(btnNewButton_1);
+		btnNewButton_2.setBounds(637, 0, 13, 14);
+		contentPane.add(btnNewButton_2);
 	}
 }
